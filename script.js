@@ -1,177 +1,117 @@
-// ========== DATA MATERI DAN SOAL ===========
-const dataMateri = {
-  "10": ["BIG", "BIO", "INFORMATIKA", "MAT", "SBK"],
-  "11": ["BIO MAT(WJB)", "MAT(TL)", "BIG", "FISIKA", "SBK", "EKONOMI", "BIG WJB", "BIG TL", "SOSIOLOGI", "SEJARAH"],
-  "12": ["BIO MAT(WJB)", "MAT(TL)", "BIG", "FISIKA", "SBK", "EKONOMI", "BIG WJB", "BIG TL", "SOSIOLOGI", "SEJARAH"] // Bisa tambah materi khusus kelas 12
-};
-
+// ===================== CONTOH DATA SOAL LENGKAP =====================
 const dataSoal = {
-  // Contoh soal, perbanyaklah sesuai kebutuhan (array soal per-materi berdasarkan level)
   "10": {
     "BIG": {
       "mudah": [
         {q: "Apa kepanjangan dari BIG?", a: "Bahasa Inggris"},
-        {q: "What is 'buku' in English?", a: "book"}
+        {q: "What is 'sekolah' in English?", a: "school"},
+        {q: "Apa bahasa Inggrisnya 'laptop'?", a: "laptop"},
+        {q: "What is 'rumah' in English?", a: "house"},
+        {q: "What is 'fifty' in Bahasa Indonesia?", a: "lima puluh"}
+        // Tambah sampai 50 soal sejenis
+      ],
+      "sedang": [
+        {q: "What is the past tense of 'go'?", a: "went"},
+        {q: "Translate: 'Saya suka belajar' ke bahasa Inggris", a: "I like studying"},
+        {q: "What is the opposite of 'tall'?", a: "short"}
+        // Tambah soal menengah (PASTI dalam bahasa Indonesia perintah/maksud soalnya)
+      ],
+      "sulit": [
+        {q: "Tulis kalimat Bahasa Inggris: 'Ali membaca buku setiap hari.'", a: "Ali reads a book every day"},
+        {q: "Apa sinonim 'happy' dalam Bahasa Inggris?", a: "joyful"}
+      ],
+      "mustahil": [
+        {q: "Sebutkan 5 idiom Bahasa Inggris dan maknanya!", a: "open"},
+        {q: "Uraikan perbedaan 'present perfect' dan 'past perfect' beserta contoh!", a: "open"}
       ]
     },
     "MAT": {
       "mudah": [
-        {q: "Berapakah hasil dari 2 x 5?", a: "10"},
-        {q: "Berapakah hasil dari 15 + 7?", a: "22"}
+        {q: "Berapakah hasil dari 5 x 4?", a: "20"},
+        {q: "Berapakah hasil 12 + 8?", a: "20"},
+        {q: "Hasil dari 15 : 3?", a: "5"},
+        {q: "10 dikali 2 sama dengan?", a: "20"},
+        {q: "30 kurang 7 hasilnya?", a: "23"}
+      ],
+      "sedang": [
+        {q: "Hasil dari 45 : 9 x 2 adalah?", a: "10"},
+        {q: "Jika x=5, berapakah 2x+3?", a: "13"},
+        {q: "Akar dari 64 adalah?", a: "8"}
+      ],
+      "sulit": [
+        {q: "Jika f(x) = 2x+1, berapa nilai f(7)?", a: "15"},
+        {q: "Berapakah hasil dari 117 - (3 x 7) + 29?", a: "117 - 21 + 29 = 125"},
+        {q: "Jika y^2 = 49, berapa dua kemungkinan nilai y?", a: "7 dan -7"}
+      ],
+      "mustahil": [
+        {q: "Jika x^2 + 4x + 4 = 0, berapa akar-akar x?", a: "-2"},
+        {q: "Jelaskan dalil Pythagoras beserta contohnya!", a: "open"}
+      ]
+    },
+    "BIO": {
+      "mudah": [
+        {q: "Apa alat pernapasan ikan?", a: "Insang"},
+        {q: "Fungsi daun pada tumbuhan?", a: "Fotosintesis"},
+        {q: "Organ utama pernapasan manusia?", a: "Paru-paru"}
+      ],
+      "sedang": [
+        {q: "Dimana proses pencernaan protein dimulai?", a: "Lambung"},
+        {q: "Bagian otak yang mengatur keseimbangan adalah?", a: "Cerebellum/serebelum"}
+      ],
+      "sulit": [
+        {q: "Bagian sel tumbuhan yang tidak ada pada sel hewan?", a: "Dinding sel"},
+        {q: "Apa itu mitosis?", a: "Pembelahan sel secara langsung"}
+      ],
+      "mustahil": [
+        {q: "Jelaskan proses fotosintesis secara lengkap!", a: "open"},
+        {q: "Sebutkan 5 peran enzim pada pencernaan manusia", a: "open"}
       ]
     }
-    // Tambah materi lain, level lain
+    // Tambahkan Informatika, SBK dan materi lain mengikuti pola di atas
+  },
+  "11": {
+    "FISIKA": {
+      "mudah": [
+        {q: "Alat untuk mengukur berat benda?", a: "Neraca/timbangan"},
+        {q: "Apa satuan SI untuk waktu?", a: "detik"}
+      ],
+      "sedang": [
+        {q: "Sebutkan rumus GLB!", a: "s = vt"},
+        {q: "Energi potensial gravitasi benda rumusnya?", a: "Ep = mgh"}
+      ],
+      "sulit": [
+        {q: "Hukum II Newton adalah?", a: "F = m x a"},
+        {q: "Satuan daya listrik?", a: "watt"}
+      ],
+      "mustahil": [
+        {q: "Jelaskan rangkaian listrik paralel dan seri!", a: "open"}
+      ]
+    },
+    "BIG": {
+      "mudah": [
+        {q: "How do you say 'pintu' in English?", a: "door"}
+        // dst
+      ],
+      "sedang": [
+        {q: "Translate: 'Dia sedang makan' ke bahasa Inggris", a: "He is eating"},
+        // dst
+      ]
+      // dst level lain
+    }
+    // Lanjutkan untuk materi kelas 11 (BIO MAT(WJB), MAT(TL), BIG, FISIKA, SBK, EKONOMI, BIG WJB, BIG TL, SOSIOLOGI, SEJARAH)
+  },
+  "12": {
+    "EKONOMI": {
+      "mudah": [
+        {q: "Apa yang dimaksud kebutuhan primer?", a: "Kebutuhan pokok"},
+        {q: "Contoh barang ekonomi?", a: "Beras"}
+      ],
+      "mustahil": [
+        {q: "Jelaskan pengertian inflasi dan dampaknya", a: "open"}
+      ]
+    }
+    // Lanjutkan sisa materi kelas 12, sesuai pola kelas 11
   }
-  // Tambah untuk kelas 11 dan 12
+  // Lengkapi sesuai daftar materi, level dan jumlah soal
 };
 
-// ========== AKUN DAN SESSION ===========
-let user = null;
-function loginUser() {
-  user = {
-    nama: document.getElementById('nama').value.trim(),
-    usia: document.getElementById('usia').value.trim(),
-    asal: document.getElementById('asal').value.trim(),
-    nilai: {},
-    sejarahQuiz: []
-  };
-  if(user.nama && user.usia && user.asal) {
-    localStorage.setItem('quizUser', JSON.stringify(user));
-    document.getElementById('loginPage').classList.add('hidden');
-    showMainMenu();
-  }
-}
-function restoreUser() {
-  let u = localStorage.getItem('quizUser');
-  if(u) {
-    user = JSON.parse(u);
-    document.getElementById('loginPage').classList.add('hidden');
-    showMainMenu();
-  }
-}
-function logout() {
-  user = null;
-  localStorage.removeItem('quizUser');
-  location.reload();
-}
-
-// ========== MENU DAN NAVIGASI ===========
-function showMainMenu() {
-  document.getElementById('mainMenu').classList.remove('hidden');
-  document.getElementById('namaUser').innerText = user.nama;
-  document.getElementById('quizMenu').classList.add('hidden');
-  document.getElementById('scorePage').classList.add('hidden');
-  document.getElementById('quizPage').classList.add('hidden');
-  document.getElementById('profilePage').classList.add('hidden');
-}
-function showQuizMenu() {
-  // Update materi sesuai kelas
-  let kelas = document.getElementById('kelas').value;
-  let materiOpt = dataMateri[kelas];
-  let materiSel = document.getElementById('materi');
-  materiSel.innerHTML = '';
-  materiOpt.forEach(m => materiSel.innerHTML += `<option>${m}</option>`);
-  document.getElementById('mainMenu').classList.add('hidden');
-  document.getElementById('quizMenu').classList.remove('hidden');
-}
-function backToMenu() { showMainMenu(); }
-
-function showScore() {
-  let out='';
-  for(const [key,nilai] of Object.entries(user.nilai||{})) {
-    out+=`<p>${key}: <b>${nilai}</b></p>`;
-  }
-  document.getElementById('scoreList').innerHTML = out||"Belum ada nilai";
-  document.getElementById('scorePage').classList.remove('hidden');
-  document.getElementById('mainMenu').classList.add('hidden');
-  document.getElementById('profilePage').classList.add('hidden');
-  document.getElementById('quizMenu').classList.add('hidden');
-}
-
-// ========== QUIZ ===========
-let quizData, quizSoal = [], jawabanUser = [];
-let quizIndex = 0, quizSkor = 0, quizKey = '';
-
-function startQuiz() {
-  let kelas = document.getElementById('kelas').value;
-  let materi = document.getElementById('materi').value;
-  let level = document.getElementById('level').value;
-  let jumlah = +document.getElementById('jumlahSoal').value;
-  // Random soal
-  let pool = (dataSoal[kelas]&&dataSoal[kelas][materi]&&dataSoal[kelas][materi][level]) ? dataSoal[kelas][materi][level] : [];
-  quizSoal = pool.length >= jumlah ? shuffle(pool).slice(0,jumlah) : pool;
-  quizIndex = 0; quizSkor = 0; jawabanUser = [];
-  quizKey = `${materi} kelas ${kelas}`;
-  document.getElementById('quizMenu').classList.add('hidden');
-  document.getElementById('quizPage').classList.remove('hidden');
-  document.getElementById('judulQuiz').innerText = `Quiz ${materi} kelas ${kelas} (${level})`;
-  nextSoal();
-}
-function nextSoal() {
-  let jawabanInput = document.getElementById('jawaban');
-  if(quizIndex>0) {
-    let userAns = jawabanInput.value.trim();
-    jawabanUser.push(userAns);
-    if(userAns.toLowerCase() === quizSoal[quizIndex-1].a.toLowerCase()) quizSkor+=10;
-  }
-  if(quizIndex < quizSoal.length) {
-    document.getElementById('soalBox').innerText = quizSoal[quizIndex].q;
-    jawabanInput.value = '';
-    document.getElementById('progress').innerText = `Soal ${quizIndex+1} dari ${quizSoal.length}`;
-    quizIndex++;
-  } else {
-    selesaiQuiz();
-  }
-}
-function selesaiQuiz() {
-  user.nilai[quizKey] = quizSkor;
-  user.sejarahQuiz.push(quizSkor);
-  localStorage.setItem('quizUser', JSON.stringify(user));
-  document.getElementById('quizPage').classList.add('hidden');
-  showScore();
-}
-
-// ========== PROFIL, GRAFIK, MOTIVASI ===========
-function showProfile() {
-  document.getElementById('mainMenu').classList.add('hidden');
-  document.getElementById('scorePage').classList.add('hidden');
-  document.getElementById('quizMenu').classList.add('hidden');
-  document.getElementById('profilePage').classList.remove('hidden');
-  document.getElementById('profileNama').innerText = user.nama;
-  document.getElementById('profileUsia').innerText = user.usia;
-  document.getElementById('profileAsal').innerText = user.asal;
-  // Update grafik
-  drawChart(user.sejarahQuiz);
-  // Motivasi
-  let motivasi = [
-    "Tetap semangat, sekolah adalah kunci masa depanmu!",
-    "Jangan menyerah, usaha tidak pernah menghianati hasil!",
-    "Setiap kegagalan adalah awal keberhasilan.",
-    "Hasil hari ini lebih baik dari kemarin!",
-    "Waktunya berprestasi, tetap percaya diri!"
-  ];
-  document.getElementById('motivasiText').innerText = motivasi[Math.floor(Math.random()*motivasi.length)];
-}
-
-// ========== GRAFIK ===========
-function drawChart(sejarah) {
-  // Buat grafik sederhana dengan emoji bar
-  let ctx = document.getElementById('progChart').getContext('2d');
-  ctx.clearRect(0,0,300,150);
-  let max = Math.max(...sejarah,100), w=220, h=130;
-  sejarah.forEach((val,i) => {
-    ctx.fillStyle="#0ea5e9";
-    ctx.fillRect(10+i*25,h-val,20,val);
-    ctx.fillText(val,14+i*25,h-val-5);
-  });
-}
-
-// ========== UTILS ===========
-function shuffle(array) {
-  return array.map(a => [Math.random(),a]).sort().map(a=>a[1]);
-}
-
-// ========== EVENT ===========
-document.getElementById('loginBtn').onclick = loginUser;
-document.getElementById('kelas').onchange = showQuizMenu;
-window.onload = restoreUser;
