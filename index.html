@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz SMA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginPage" class="active">
+    <h1>Masuk Quiz SMA</h1>
+    <input type="text" id="nama" placeholder="Nama">
+    <input type="number" id="usia" placeholder="Usia">
+    <input type="text" id="asal" placeholder="Tempat Tinggal">
+    <button id="loginBtn">Masuk</button>
+  </div>
+  <div id="mainMenu" class="hidden">
+    <h2>Halo, <span id="namaUser"></span>!</h2>
+    <button onclick="showQuizMenu()">Mulai Quiz</button>
+    <button onclick="showScore()">Lihat Nilai</button>
+    <button onclick="showProfile()">Profil & Motivasi</button>
+    <button onclick="logout()">Keluar Akun</button>
+  </div>
+  <div id="quizMenu" class="hidden">
+    <h2>Pilih Kelas, Materi, dan Level</h2>
+    <label>Kelas:
+      <select id="kelas">
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+    </label>
+    <label>Materi:
+      <select id="materi"></select>
+    </label>
+    <label>Level:
+      <select id="level">
+        <option value="mudah">Mudah</option>
+        <option value="sedang">Sedang</option>
+        <option value="sulit">Sulit</option>
+        <option value="mustahil">Mustahil</option>
+      </select>
+    </label>
+    <label>Jumlah Soal:
+      <select id="jumlahSoal">
+        <option>10</option>
+        <option>20</option>
+        <option>30</option>
+        <option>40</option>
+        <option>50</option>
+      </select>
+    </label>
+    <button onclick="startQuiz()">Mulai</button>
+    <button onclick="backToMenu()">Kembali</button>
+  </div>
+  <div id="quizPage" class="hidden">
+    <h2 id="judulQuiz"></h2>
+    <div id="soalBox"></div>
+    <input type="text" id="jawaban" placeholder="Jawaban">
+    <button onclick="nextSoal()">Jawab</button>
+    <div id="progress"></div>
+  </div>
+  <div id="scorePage" class="hidden">
+    <h2>Nilai Quiz</h2>
+    <div id="scoreList"></div>
+    <button onclick="backToMenu()">Kembali</button>
+  </div>
+  <div id="profilePage" class="hidden">
+    <h2>Profil</h2>
+    <p>Nama: <span id="profileNama"></span></p>
+    <p>Usia: <span id="profileUsia"></span></p>
+    <p>Tempat Tinggal: <span id="profileAsal"></span></p>
+    <h3>Grafik Perkembangan</h3>
+    <div id="chartContainer"><canvas id="progChart"></canvas></div>
+    <p id="motivasiText"></p>
+    <button onclick="backToMenu()">Kembali</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
